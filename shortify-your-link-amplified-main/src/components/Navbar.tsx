@@ -13,7 +13,7 @@ const Navbar = () => {
             Dashboard
           </a>
           <a
-            href="https://github.com"
+            href="https://github.com/saiprasad367"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-foreground transition-colors duration-150"
