@@ -89,7 +89,11 @@ const Index = () => {
       const data = await res.json();
 
       if (!res.ok) {
-        throw new Error(data.error || "Failed to create short URL");
+        let errorMsg = data.error || "Failed to create short URL";
+        if (data.details && data.details.length > 0) {
+          errorMsg = `${errorMsg}: ${data.details[0].message}`;
+        }
+        throw new Error(errorMsg);
       }
 
       const newUrl: ShortenedUrl = {

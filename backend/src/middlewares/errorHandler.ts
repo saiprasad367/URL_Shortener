@@ -9,5 +9,6 @@ export const errorHandler = (err: any, req: Request, res: Response, next: NextFu
 
     res.status(status).json({
         error: message,
+        details: err.errors // Include detailed Zod validation messages
     });
 };
