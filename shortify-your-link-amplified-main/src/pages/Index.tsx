@@ -9,7 +9,7 @@ import DeleteModal from "@/components/DeleteModal";
 import Footer from "@/components/Footer";
 import type { ShortenedUrl } from "@/types/url";
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_URL = import.meta.env.VITE_API_URL || "https://url-shortener-mgz6.onrender.com";
 
 const Index = () => {
   const { toast } = useToast();
